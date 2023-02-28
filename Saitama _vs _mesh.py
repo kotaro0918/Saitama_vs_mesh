@@ -1,10 +1,9 @@
 import json
+import math
 import collections
 def mesh_count(a):
-    lg_list=str(a[0]).split('.')
-    lg_result=str(int(lg_list[0])-100)
-    la_list=str(a[1]).split('.')
-    la_aspect=str(float(la_list[0])*(1.5)+(float(a[1])-float(la_list[0]))*(0.9))
+    lg_result=str(math.floor(a[0]-100))
+    la_aspect=str(math.floor(a[1])*(1.5)+(a[1]-math.floor(a[1]))*(0.9))
     la_result=la_aspect.split('.')[0]
     return(la_result+lg_result)
 json_open = open('Saitama.geojson','r')
