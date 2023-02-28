@@ -7,7 +7,7 @@ def mesh_count(a):
     la_aspect=str(float(la_list[0])*(1.5)+(float(a[1])-float(la_list[0]))*(0.9))
     la_result=la_aspect.split('.')[0]
     return(la_result+lg_result)
-json_open = open('Saitama.json','r')
+json_open = open('Saitama.geojson','r')
 json_load = json.load(json_open)
 key_list = list(json_load.keys())
 features_list=json_load['features']
