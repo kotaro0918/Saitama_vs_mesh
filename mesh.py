@@ -6,7 +6,8 @@ def mesh_count(a):
     la_aspect=str(math.floor(a[1])*(1.5)+(a[1]-math.floor(a[1]))*(0.9))
     la_result=la_aspect.split('.')[0]
     return(la_result+lg_result)
-json_open = open('Saitama.geojson','r')
+json_file=input()
+json_open = open(json_file,'r')
 json_load = json.load(json_open)
 features_list=json_load['features']
 mesh_list=[]
@@ -18,4 +19,4 @@ for i in range(len(coordinates_dic)):
         mesh_list.append(mesh_count(coordinates_list[j]))
 c = collections.Counter(mesh_list)
 for key in sorted(c.keys()):
-    print("11:{mesh}".format(mesh=key))
+    print(key)
