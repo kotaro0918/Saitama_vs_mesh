@@ -9,7 +9,7 @@ def mesh_count(a):
     la_result=la_aspect.split('.')[0]
     return(la_result+lg_result)
 if lev[1] == "level1":
-    json_file=input()
+    json_file=lev[2]
     json_open = open(json_file,'r')
     json_load = json.load(json_open)
     features_list=json_load['features']
