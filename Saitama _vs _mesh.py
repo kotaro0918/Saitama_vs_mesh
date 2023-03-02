@@ -17,6 +17,5 @@ for i in range(len(coordinates_dic)):
     for j in range(len(coordinates_list)):
         mesh_list.append(mesh_count(coordinates_list[j]))
 c = collections.Counter(mesh_list)
-print(c)
 for key in sorted(c.keys()):
     print("11:{mesh}".format(mesh=key))
