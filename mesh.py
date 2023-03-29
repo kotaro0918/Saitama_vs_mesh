@@ -11,14 +11,13 @@ mesh_list = []
 
 
 def mesh_count_1(a):
-    lg_result = str(math.floor(a[0] - 100))
-    la_aspect = str(math.floor(a[1]) * (1.5) + (a[1] - math.floor(a[1])) * (0.9))
-    la_result = la_aspect.split(".")[0]
-    mesh_list.append(la_result + lg_result)
+    lg_result = int(math.floor(a[0] - 100))
+    la_aspect = int(math.floor(a[1]) * (1.5) + (a[1] - math.floor(a[1])) * (0.9))
+    mesh_list.append(la_aspect * 100 + lg_result)
 
 
 def mesh_count_2(a):
-    lg_result_1 = math.floor(a[0] - 100)
+    lg_result_1 = int(math.floor(a[0] - 100))
     lg_result_2 = int((a[0] - math.floor(a[0])) // 0.125)
     la_result_1 = int((a[1]) * (60) // 40)
     la_result_2 = int(int((a[1]) * (60) % 40) // 5)
